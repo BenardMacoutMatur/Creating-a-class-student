@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+
+class student{
+private:
+    int phone_numb;
+    string home_address;
+
+public:
+    string reg_numb;
+    int age;
+    float fees;
+
+    void enter_student_details()
+{
+    cout<<"Enter your reg number: "<<endl;
+    getline(cin,reg_numb);
+    cout<<"Enter your age: "<<endl;
+    cin>>age;
+    cout<<"Enter your fees per year: "<<endl;
+    cin>>fees;
+    cout<<"Enter your phone number: "<<endl;
+    cin>>phone_numb;
+    cout<<"Enter your home address: ";
+    getline(cin,home_address);
+
+}
+void display_student_details()
+{
+    cout<<reg_numb<<age<<fees<<phone_numb<<home_address;
+}
+
+};
+
+int main()
+{
+    student s;
+    s.enter_student_details();
+    s.display_student_details();
+
+    return 0;
+}
